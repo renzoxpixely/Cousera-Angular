@@ -15,6 +15,10 @@ import { DishService} from './services/dish.service';
 import { PromotionService } from './services/promotion.service';
 import { LeaderService } from './services/leader.service';
 
+
+import { MatDialogModule } from '@angular/material/dialog';
+
+
 import 'hammerjs';
 import { Browser } from 'protractor';
 import { MenuComponent } from './menu/menu.component';
@@ -24,6 +28,7 @@ import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +39,8 @@ import { FooterComponent } from './footer/footer.component';
     HomeComponent,
     ContactComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -42,6 +48,7 @@ import { FooterComponent } from './footer/footer.component';
     MatToolbarModule,
     FlexLayoutModule,
     MatListModule,
+    MatDialogModule,
     MatGridListModule,
     MatCardModule,
     MatButtonModule,
@@ -52,6 +59,9 @@ import { FooterComponent } from './footer/footer.component';
     PromotionService,
     LeaderService
   ],
+  entryComponents: [
+    LoginComponent
+],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
